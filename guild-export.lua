@@ -2,21 +2,21 @@ guildMembers = {}
 
 SLASH_GRILL1 = '/grill';
 function SlashCmdList.GRILL()
-		local members = GetNumGuildMembers();
+    local members = GetNumGuildMembers();
 
-		for i = 1, members, 1
-		do
-				SetGuildRosterSelection(i);
-				local selectedGuildMember = GetGuildRosterSelection();
-				local Name = GetGuildRosterInfo(selectedGuildMember);
+    for i = 1, members, 1
+    do
+        SetGuildRosterSelection(i);
+        local selectedGuildMember = GetGuildRosterSelection();
+        local Name = GetGuildRosterInfo(selectedGuildMember);
 
-				print(selectedGuildMember, RemoveServer(Name));
-				guildMembers[selectedGuildMember] = RemoveServer(Name)
-		end
+        print(selectedGuildMember, RemoveServer(Name));
+        guildMembers[selectedGuildMember] = RemoveServer(Name)
+    end
 end
 
 function RemoveServer(player)
-	return Split(player, "-")[1];
+    return Split(player, "-")[1];
 end
 
 function Split(s, delimiter)
