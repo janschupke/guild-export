@@ -1,0 +1,8 @@
+## Interface: 11302
+## Author: Grillette
+## Title: Guild Export
+## Notes: Guild Export
+## Version: 1.0
+## SavedVariables: guildMembers
+## OptionalDeps:
+guild-export.lua
